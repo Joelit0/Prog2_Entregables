@@ -1,0 +1,30 @@
+Link del repositorio: https://github.com/Joelit0/Hola-Mundo
+
+mkdir Hola-mundo 
+cd Hola-mundo 
+git init
+git branch -m main // Renombrar la branch a main
+touch README.md // Crear el archivo readme
+vi README.md // Editar el archivo con el editor vi de la consola
+git status // Ver los cambios actuales
+git add . // El . agrega todos los cambios que hayan, como tengo uno solo pongo .
+git commit -m "Commit inicial"
+git remote add origin git@github.com:Joelit0/Hola-Mundo.git
+git pull origin main --allow-unrelated-histories
+git branch --set-upstream-to=origin/main main
+git push origin main
+rm README.md // Borro el archivo
+rm .gitignore // Borro el archivo
+rm -d -r .git // Borro la carpeta, la bandera -d indica que es un directorio y la bandera -r indica que la borra aunque tenga contenido
+git clone git@github.com:Joelit0/Hola-Mundo.git
+cd Hola-Mundo
+git checkout -b dev
+vi README.md // Edito nuevamente el archivo
+git status // Veo nuevamente los cambios actuales
+git add .
+git commit -m "Cambios en la rama"
+git push origin dev
+git checkout main
+git merge dev
+git push origin main
+git branch -D dev
